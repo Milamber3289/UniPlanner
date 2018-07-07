@@ -2,7 +2,7 @@
 
 Assessment::Assessment(){
 	set_name("no name");
-	set_weight(0.0)
+	set_weight(0.0);
 }
 
 Assessment::Assessment(double input_weight){
@@ -41,7 +41,15 @@ double Assessment::get_weight(){
 	return weighting;
 }
 
+double Assessment::get_score(){
+	return score_percent;
+}
 
+double Assessment::get_grade_contribution(){
+	double grade_contribution = 0;
+	grade_contribution = score_percent * weighting/100.00;
+	return grade_contribution;
+}
 
 /*
 

@@ -35,7 +35,7 @@ class Assessment{
 		//returns score
 		double get_score();
 
-		//returns grade contribution (weighting * score)
+		//returns grade contribution (score*weighting/100.00)
 		double get_grade_contribution();
 		
 	private:
