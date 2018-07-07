@@ -1,25 +1,30 @@
 #ifndef Assessment_H
 #define Assessment_H
 #include<string>
-class assessment{
+using namespace std;
+
+class Assessment{
 	public:
 		//default constructor
-		assessment();
+		Assessment();
 
 		//constructor setting intial value for assessment_name
-		assessment(string);
+		Assessment(string);
 		
 		//constructor setting intial value for assessment weighting
-		assessment(double);
+		Assessment(double);
 		
 		//constructor setting name and intial value for assessment weighting
-		assessment(string, double);
+		Assessment(string, double);
 		
 		//setter for assessment name
 		void set_name(string);
 		
 		//setter for assessment weighting
 		void set_weight(double);
+		
+		//setter for assessment weighting
+		void set_score(double);
 		
 		//returns assessment name
 		string get_name();
@@ -44,5 +49,5 @@ class assessment{
 		//score on assessment item
 		double score_percent;
 	
-}
+};
 #endif
