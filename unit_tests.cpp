@@ -1,9 +1,15 @@
 #include<string>
 #include<iostream>
 #include "assessment.h"
+#include "subject.h"
 using namespace std;
 
 int main(){
+	
+	Subject subject1("Object Oriented Programming");
+	cout<<subject1.get_name()<<endl;
+	subject1.new_assessment("Taxi app", 12);
+	cout<<subject1.get_assessment_name(0)<<endl;
 	
 	Assessment item1;
 	item1.set_name("Assignment 1");
@@ -22,5 +28,3 @@ int main(){
 	cout<<item2.get_grade_contribution()<<endl;	
 	
 }
-
-using namespace std;
