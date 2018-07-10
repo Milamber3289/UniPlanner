@@ -26,6 +26,9 @@ class Assessment{
 		//setter for assessment weighting
 		void set_score(double);
 		
+		//set assessment complete flag (true = complete)
+		void set_complete(bool);
+		
 		//returns assessment name
 		string get_name();
 		
@@ -34,10 +37,10 @@ class Assessment{
 		
 		//returns score
 		double get_score();
-
-		//returns grade contribution (score*weighting/100.00)
-		double get_grade_contribution();
 		
+		//returns assessment complete flag
+		bool get_complete();
+
 	private:
 		
 		//name to help user differentiate between assessment items
@@ -48,6 +51,9 @@ class Assessment{
 		
 		//score on assessment item
 		double score_percent;
-	
+		
+		//flag showing whether assessment item has been completed
+		bool assessment_complete;
+		
 };
 #endif

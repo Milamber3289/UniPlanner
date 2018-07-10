@@ -25,9 +25,18 @@ class Subject{
 		//add a new assessment item to the subject
 		void new_assessment(string, double);
 		
-		//returns name for nth assessment item where n=0 is the first assessment item
-		string get_assessment_name(int);
+		//returns pointer to nth assessment where n=0 is the first assessment item
+		Assessment* get_assessment(int);
 		
+		//returns total weight of all related assessments
+		double total_weight();
+		
+		//returns Mark (%) for subject assuming no further assessment is completed
+		double Mark();
+		
+		//returns predicted Mark (%) for subject assuming current performance continues
+		double Mark_predict();
+			
 	private:
 		
 		//name to help user differentiate between subject items
@@ -35,6 +44,6 @@ class Subject{
 		
 		//vector of pointers to assessment items
 		vector<Assessment*> assessment_items;
-	
+			
 };
 #endif
